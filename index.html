@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLY BOOKED</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    animation: colorTransition 5s infinite alternate; /* Adjust the duration as needed */
+}
+
+@keyframes colorTransition {
+    from {
+        background-color: yellow;
+    }
+    to {
+        background-color: orange;
+    }
+}
+
+header {
+        background-color: white;
+        color: black;
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header img {
+        max-width: 500px; /* Adjust the max-width as needed */
+        height: auto;
+        margin-right: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+
+
+
+#navbar {
+    overflow: hidden;
+    background-color: #e44d26;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar img {
+    vertical-align: middle;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.search-container {
+    float: right;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    width: 150px; /* Adjust width as needed */
+}
+
+.search-container button {
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sticky navigation bar on scroll */
+@media (min-width: 600px) {
+    #navbar {
+        padding: 15px;
+    }
+
+    #navbar a {
+        padding: 16px 16px;
+        font-size: 18px;
+    }
+
+    .search-container input[type="text"] {
+        width: 200px;
+    }
+}
+
+#cart-icon {
+    font-size: 30px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+#cart-icon:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+  
+
+.slideshow-container {
+        max-width: 1400px;
+        position: relative;
+        margin: auto;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+.shape-container {
+    background-color: #e44d26; /* Orange color */
+    color: black; /* Text color (white) */
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center; /* Center text */
+    margin-bottom: 10px;
+}
+
+
+
+.container_p {
+    position: relative;
+    width: 500%;
+    max-width: 500px;
+    text-align: center; /* Center the containers */
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 70px;
+}
+
+.image {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    display: block; /* Make sure each image is a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+
+ 
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e44d26;
+    overflow: hidden;
+    width: 70%;
+    height: 100%;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0; /* Initially hide the overlay */
+}
+  
+  
+  .container_p:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .container_p:hover .overlay {
+    width: 100%;
+  }
+
+
+ 
+  
+
+
+
+  .gallery-section {
+    text-align: center;
+}
+
+.shape-container {
+    background-color: #e44d26;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 4px;
+    margin: 0 -10px;
+}
+
+.product-container {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    margin: 0 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-container:hover {
+    transform: scale(1.05);
+}
+
+.product-container img {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 300px; /* Set a fixed width for the image */
+    height: 300px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the specified dimensions */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.product-container p {
+    margin: 5px 0;
+    margin-left: 20px;
+}
+
+.product-container p:nth-child(3) {
+    font-weight: bold;
+}
+.product-container button {
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Add padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; /* Add border radius */
+    transition: background-color 0.3s ease-in-out; /* Add smooth transition for background color */
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.product-container button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-section a i {
+        font-size: 36px; /* Adjust the size as needed */
+    }
+  
+  .footer-section h2 {
+    color: #F3B95F;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<Body>
+    
+    <header>
+        <img src="https://www.fullybookedonline.com/media/logo/stores/1/fullybooked-logo.png" alt="Fully Booked Logo" width="500" height="auto">
+    </header>
+    <div id="navbar">
+        <a class="active" href="Fully Booked.html">Home</a>
+        <a href="product sample.htm">Books</a>
+        <a href="reviews.htm">Reviews</a>
+        <a href="About Us.htm">About Us</a>
+        <a href="contact us.htm">Join Us</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+            <a href="Add to cart.htm" id="cart-icon" class="bi bi-cart-fill"></a>
+        </div>
+    </div>
+
+
+    
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://www.fullybookedonline.com/media/wysiwyg/Notebooks_Journals.png" alt="Fully Booked">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://www.fullybookedonline.com/media/wysiwyg/Supplies_1.png" alt="Fully Booked">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://www.fullybookedonline.com/media/wysiwyg/Reading_Accessories_2.png" alt="Fully Booked">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://www.fullybookedonline.com/media/wysiwyg/Character_3.png" alt="Fully Booked">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://www.fullybookedonline.com/media/wysiwyg/Children_s_12.png" alt="Fully Booked">
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            slideIndex++;
+    
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+    
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
+        }
+    </script>
+
+<div class="shape-container">
+   <h1>CATEGORIES</h1>
+</div>
+
+<div class="container_p">
+    <a href="product sample.htm#horror-thriller-section" style="text-decoration: none; color: inherit;">
+        <img src="Photo/Horror genre.jpg" alt="Avatar" class="image">
+        <div class="overlay" id="horror-thriller-section">Horror/Thriller</div>
+    </a>
+</div>
+
+<div class="container_p">
+    <a href="product sample.htm#romance-section" style="text-decoration: none; color: inherit;">
+        <img src="Photo/Romance.jpg" alt="Avatar" class="image">
+        <div class="overlay" id="romance">Romance</div>
+    </a>
+</div>
+
+<div class="container_p">
+    <a href="product sample.htm#fantasy-section" style="text-decoration: none; color: inherit;">
+        <img src="Photo/Fantasy.jpg" alt="Avatar" class="image">
+        <div class="overlay" id="fantasy">Fantasy</div>
+    </a>
+</div>
+
+<div class="container_p">
+    <a href="product sample.htm#non-fiction-section" style="text-decoration: none; color: inherit;">
+        <img src="Photo/NF2.webp" alt="Avatar" class="image">
+        <div class="overlay" id="non-fiction">Non-Fiction</div>
+    </a>
+</div>
+
+<div class="container_p">
+    <a href="product sample.htm#lgbtq-section" style="text-decoration: none; color: inherit;">
+        <img src="Photo/queer.png" alt="Avatar" class="image">
+        <div class="overlay" id="lgbtq">LGBTQ+</div>
+    </a>
+</div>
+
+<div class="container_p">
+    <a href="product sample.htm#manga-section" style="text-decoration: none; color: inherit;">
+        <img src="Photo/manga.jpeg" alt="Avatar" class="image">
+        <div class="overlay" id="manga">Manga</div>
+    </a>
+</div>
+
+
+
+<div class="gallery-section">
+    <div class="shape-container">
+        <h1>UPCOMING SOON...</h1>
+    </div>
+     <div class="row">
+        <div class="product-container">
+            <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780008653149.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Book cover">
+            <p><b>A Good Girl’s Guide to Murder, <br>Special Collector's Edition (Hardcover)</b></p>
+            <p>By Holly Jackson</p>
+            <p>₱1,019.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-container">
+            <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780063276161.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+            <p><b>So Fetch: The Making of Mean Girls <br>(And Why We're Still So Obsessed with It) <br>(Hardcover)</b></p>
+            <p>By Jennifer Keishin Armstrong</p>
+            <p>₱1,679.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-container">
+            <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780008680855.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+            <p><b>Good Girl Bad Blood, <br>Special Collector's Edition (Hardcover)</b></p>
+            <p>By Holly Jackson</p>
+            <p>₱1,019.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-container">
+            <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781464223365_cc223.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+            <p><b>Call It What You Want: A Novel (Paperback)</b></p>
+            <p>By Alissa DeRogatis</p>
+            <p>₱999.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-container">
+            <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781250342768.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+            <p><b>The Fury, Export Edition (Paperback)</b></p>
+            <p>By Alex Michaelides</p>
+            <p>₱999.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-container">
+            <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781578262939.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+            <p><b>How to Hug a Porcupine: <br>Easy Ways to Love the Difficult People <br>in Your Life (Hardcover)</b></p>
+            <p>By Dr. Debbie Joffe Ellis (Contributor), <br>June Eding (Editor)</p>
+            <p>₱699.00</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <div class="shape-container">
+            <h1>BESTSELLERS</h1>
+         </div>
+        <div class="row">
+            <div class="product-container">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593539644_5cf6b.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p><b>How to Love Your Daughter : <br>A Novel (Hardcover)</b></p>
+                <p>By Hila Blum, <br>Daniella Zamir (Translated by)</p>
+                <p>₱1,176.00</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-container">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593334836.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p><b>Book Lovers (Paperback)</b></p>
+                <p>By Emily Henry</p>
+                <p>₱420.00</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-container">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781339016573_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p><b>The Ballad of Songbirds and Snakes:<br> A Hunger Games Novel (Paperback)</b></p>
+                <p>By Suzanne Collins</p>
+                <p>₱1,019.00</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-container">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593714478.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p><b>The Celebrants: A Novel, Export Edition <br>(Paperback)</b></p>
+                <p>By Steven Rowley</p>
+                <p>₱999.00</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-container">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780063323179_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p><b>Yellowface, Export Edition — Deckle Edge <br>(Paperback)</b></p>
+                <p>By R. F. Kuang</p>
+                <p>₱995.00</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product-container">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780008589837.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p><b>Herc: A Novel (Paperback)</b></p>
+                <p>By Phoenicia Rogerson</p>
+                <p>₱779.00</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+            
+        <footer>
+            <div class="footer-content">
+              <div class="footer-section">
+                <h2><img src="https://www.fullybookedonline.com/media/wysiwyg/Footerlogo.png" style="width: 200px;"></h2>
+                <p>For inquiries/concerns, <br>get in touch with us at <a href="mailto:support@fullybookedonline.com">support@fullybookedonline.com</a></p>
+                <p>Live Chat</p>
+              </div>
+              <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                  <li><a href="About Us.htm">About Us</a></li>
+                  <li><a href="#">Store Locator</a></li>
+                  <li><a href="contact us.htm">Contact Us</a></li>
+                  <li><a href="#">Direct Sales</a></li>
+                  <li><a href="#">Discount Card</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h2>Payment Methods</h2>
+                <p>Bank Deposit/Over the Counter</p>
+                <p>Cash on Delivery</p>
+                <p>Credit/Debit Cards</p>
+                <p>Digital Wallets (GCash, Paymaya)</p>
+                <p>Online Banking</p>
+              </div>
+              <div class="footer-section">
+                <h2>Follow Us</h2>
+                <a href="https://www.facebook.com/fullybooked" target="_blank" class="w3-hover-opacity w3-large">
+                    <i class="fa fa-facebook-official"></i> <!-- Facebook Icon -->
+                </a>
+                <a href="https://www.instagram.com/_fullybooked" target="_blank" class="w3-hover-opacity w3-large">
+                    <i class="fa fa-instagram"></i> <!-- Instagram Icon -->
+                </a>
+                <a href="https://twitter.com/_FullyBooked" target="_blank" class="w3-hover-opacity w3-large">
+                    <i class="fa fa-twitter"></i> <!-- Twitter Icon -->
+                </a>
+            </div>
+        </div>
+          </footer>
+</Body>
+</html>

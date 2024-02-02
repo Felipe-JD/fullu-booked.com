@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLY BOOKED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product p {
+            margin: 0;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .add-to-cart {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #e44d26;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .search-container {
+            float: right;
+        }
+        
+        .search-container input[type=text] {
+            padding: 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border: none;
+            font-size: 17px;
+        }
+        
+        .search-container button {
+            padding: 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Sticky navigation bar on scroll */
+        /* Note: Adjust the background color and other styles as needed */
+        /* The transition effect is added for a smoother appearance */
+        @media (min-width: 600px) {
+            #navbar {
+            padding: 15px;
+            transition: 0.4s;
+            }
+        
+            #navbar a {
+            padding: 16px 16px;
+            font-size: 18px;
+            }
+        
+            .search-container input[type=text] {
+            width: 200px;
+            }
+        }
+
+        
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-section a i {
+        font-size: 36px; /* Adjust the size as needed */
+    }
+  
+  .footer-section h2 {
+    color: #F3B95F;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+    </style>
+</head>
+
+<Body>
+
+    <div id="navbar">
+        <a class="active" href="Fully Booked.html">Home</a>
+        <a href="product sample.htm">Books</a>
+        <a href="reviews.htm">Reviews</a>
+        <a href="About Us.htm">About Us</a>
+        <a href="contact us.htm">Join Us</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+            <a href="Add to cart.htm" id="cart-icon">&#128722;</a> <!-- Shopping cart icon -->
+        </div>
+      </div>
+    
+      <a href="Fully Booked.html#horror-thriller-section" style="text-decoration: none; color: inherit;">
+        <h2 id="horror-thriller" style="margin-top: 50px; text-align: left; margin-left: 10px;">HORROR/THRILLER</h2>
+    </a>
+    <div class="product-grid">
+        <div class="product">
+            <div class="product-info">
+                <a href="Books.htm" style="text-decoration: none; color: inherit;">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780735212534.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                    <p class="product-title">The Hunger (Paperback)</p>
+                    <p>By Alma Katsu</p>
+                    <p class="product-price"><b>₱935.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('The Hunger (Paperback)', 935.00)">Add to Cart</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+              <a href="Books(1).htm" style="text-decoration: none; color: inherit;">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781421580791.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Fragments of Horror (Hardcover)</p>
+                <p>By Junji Ito</p>
+                <p class="product-price"><b>₱999.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Fragments of Horror (Hardcover)', 999.00)">Add to Cart</button>
+              </a>
+            </div>
+          </div>
+
+        <div class="product">
+            <div class="product-info">
+                <a href="Books(2).htm" style="text-decoration: none; color: inherit;">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781647291600.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 3">
+                    <p class="product-title">Dissolving Classroom, Collector's Edition (Hardcover)</p>
+                    <p>By Junji Ito</p>
+                    <p class="product-price"><b>₱1,397.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Dissolving Classroom, Collector\'s Edition (Hardcover)', 1397.00)">Add to Cart</button>
+                </a>
+            </div>
+        </div>
+
+        <a href="Books(3).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781250758989.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">The Fury (Hardcover)</p>
+                    <p>By Alex Michaelides</p>
+                    <p class="product-price"><b>₱1,623.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(4).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593160275_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">Vertical Run: A Novel (Paperback)</p>
+                    <p>By Joseph Garber</p>
+                    <p class="product-price"><b>₱768.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(5).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/c/l/clipboard_17__3.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">Escaping From Houdini: Stalking Jack the Ripper, Book 3 (Paperback)</p>
+                    <p>By Kerri Maniscalco</p>
+                    <p class="product-price"><b>₱727.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(6).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781250812704.1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">Sundial (Paperback)</p>
+                    <p>By Catriona Ward</p>
+                    <p class="product-price"><b>₱1,099.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(7).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781974739035.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">Dark Gathering, Vol. 2 (Paperback)</p>
+                    <p>By Kenichi Kondo</p>
+                    <p class="product-price"><b>₱559.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(8).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781538703168.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">The President's Daughter: A Thriller (Mass Market)</p>
+                    <p>By James Patterson, Bill Clinton</p>
+                    <p class="product-price"><b>₱559.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <a href="Fully Booked.html#romance-section" style="text-decoration: none; color: inherit;">
+        <h2 id="romance-section" style="margin-top: 50px; text-align: left; margin-left: 10px;">ROMANCE</h2>
+    </a>
+    <div class="product-grid">
+        <a href="Book(9).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/97800628573161.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                    <p class="product-title">Dangerous Alliance: An Austentacious Romance (Paperback)</p>
+                    <p>By Jennieke Cohen</p>
+                    <p class="product-price"><b>₱484.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(10).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781982190484.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">To Marry and to Meddle: The Regency Vows, Book 3 (Paperback)</p>
+                    <p>By Martha Waters</p>
+                    <p class="product-price"><b>₱968.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(11).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593419939.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">Just My Type (Paperback)</p>
+                    <p>By Falon Ballard</p>
+                    <p class="product-price"><b>₱644.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(12).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781611591026.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">All You Need Is Love: 101 Tales of Romance and Happily Ever After (Paperback)</p>
+                    <p>By Amy Newmark</p>
+                    <p class="product-price"><b>₱949.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(13).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781958931004.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                    <p class="product-title">Brutal Prince: Brutal Birthright, Book 1 – (Paperback)</p>
+                    <p>By Sophie Lark</p>
+                    <p class="product-price"><b>₱1,493.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(14).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/i/m/imageedit_1_3180639212.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">The Nanny (Paperback)</p>
+                    <p>By Lana Ferguson</p>
+                    <p class="product-price"><b>₱952.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(15).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781496735355.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                    <p class="product-title">Instamom: A Modern Romance with Humor and Heart (Paperback)</p>
+                    <p>By Chantel Guertin</p>
+                    <p class="product-price"><b>₱798.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(16).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/97800623794.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                    <p class="product-title">A Scot in the Dark: Scandal and Scoundrel, Book 2 (Mass Market)</p>
+                    <p>By Sarah MacLean</p>
+                    <p class="product-price"><b>₱399.00</b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="Book(17).htm" style="text-decoration: none; color: inherit;">
+            <div class="product">
+                <div class="product-info">
+                    <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781638588337.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 3">
+                    <p class="product-title">Imaginary, Vol. 2 <br>(Paperback)</p>
+                    <p>By Niiro Ikuhana</p>
+                    <p class="product-price"><b>₱783.00 </b></p>
+                    <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    
+    <a href="Fully Booked.html#fantasy-section" style="text-decoration: none; color: inherit;">
+        <h2 id="fantasy-section" style="margin-top: 50px; text-align: left; margin-left: 10px;">FANTASY</h2>
+    </a>
+    <div class="product-grid">
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781646092352.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                <p class="product-title">Final Fantasy XIV: Eorzea Academy (Paperback)</p>
+                <p>By Esora Amaichi, FINAL FANTASY XIV Operations Team</p>
+                <p class="product-price"><b>₱839.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781646091775.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Final Fantasy VII Remake: Traces of Two Pasts – Novel (Hardcover)</p>
+                <p>By Kazushige Nojima</p>
+                <p class="product-price"><b>₱1,399.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781665905299.1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Ravensong <br>(Hardcover)</p>
+                <p>By Cayla Fay</p>
+                <p class="product-price"><b>₱799.20</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781909414129.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Sketching from the Imagination: Fantasy (Paperback)</p>
+                <p>By 3dtotal Publishing</p>
+                <p class="product-price"><b>₱1,679.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780147513861-1_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">The Rose and the Dagger: Wrath of The Dawn, Book 2 (Paperback)</p>
+                <p>By Renee Ahdieh</p>
+                <p class="product-price"><b>₱546.40</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781035900244.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Sons of Darkness (Paperback)</p>
+                <p>By Gourav Mohanty</p>
+                <p class="product-price"><b>₱1,019.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781646091768_2.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Final Fantasy VII Remake: Material Ultimania Plus (Hardcover)</p>
+                <p>By Square Enix</p>
+                <p class="product-price"><b>₱2,051.10</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780545980258.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">The Kingdom Of Fantasy: Geronimo Stilton, Book 1 (Hardcover)</p>
+                <p>By Geronimo Stilton</p>
+                <p class="product-price"><b>₱951.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780062835789.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Gallant <br>(Paperback)</p>
+                <p>By V. E. Schwab</p>
+                <p class="product-price"><b>₱799.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="Fully Booked.html#non-fiction-section" style="text-decoration: none; color: inherit;">
+        <h2 id="non-fiction-section" style="margin-top: 50px; text-align: left; margin-left: 10px;">NON-FICTION</h2>
+    </a>
+    <div class="product-grid">
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780375718908vg_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                <p class="product-title">Political Fictions (Paperback)</p>
+                <p>By Joan Didion</p>
+                <p class="product-price"><b>₱952.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781646091775.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Truly Peculiar: Fantastic Facts That Are Stranger Than Fiction (Paperback)</p>
+                <p>By Tom Standage</p>
+                <p class="product-price"><b>₱629.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780811213400.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Selected Cronicas (Paperback)</p>
+                <p>By Clarice Lispector</p>
+                <p class="product-price"><b>₱1,136.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780062282712_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Bad Feminist (Paperback)</p>
+                <p>By Roxane Gay</p>
+                <p class="product-price"><b>₱999.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/97805256587191.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p class="product-title">Home/Land: A Memoir of Departure and Return (Hardcover)</p>
+                <p>By Rebecca Mead</p>
+                <p class="product-price"><b>₱1,399.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/97816838369191.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Spacepedia (Hardcover)</p>
+                <p>By Brad Herzog</p>
+                <p class="product-price"><b>₱625.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781101875964.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Stray: A Memoir (Hardcover)</p>
+                <p>By Stephanie Danler</p>
+                <p class="product-price"><b>₱1,246.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/97805931381131.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">The Palace Papers: Inside the House of Windsor—the Truth and the Turmoil (Paperback)</p>
+                <p>By Tina Brown</p>
+                <p class="product-price"><b>₱728.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780306828881.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Acne: A Memoir (Hardcover)</p>
+                <p>By Laura Chinn</p>
+                <p class="product-price"><b>₱1,595.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="Fully Booked.html#lgbtq-section" style="text-decoration: none; color: inherit;">
+        <h2 id="lgbtq-section" style="margin-top: 50px; text-align: left; margin-left: 10px;">LGBTQ+</h2>
+    </a>
+    <div class="product-grid">
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780063060234.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                <p class="product-title">The Lesbiana's Guide to Catholic School (Hardcover)</p>
+                <p>By Sonora Reyes</p>
+                <p class="product-price"><b>₱730.80</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781685796204.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Asumi-chan is Interested in Lesbian Brothels! Vol. 3 (Paperback)</p>
+                <p>By Kuro Itsuki</p>
+                <p class="product-price"><b>₱839.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780525516279_1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Hot Dog Girl (Paperback)</p>
+                <p>By Jennifer Dugan</p>
+                <p class="product-price"><b>₱615.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781646091621.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">I Think Our Son Is Gay, Vol. 4 (Paperback)</p>
+                <p>By Okura</p>
+                <p class="product-price"><b>₱824.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781803287393.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p class="product-title">A Collection of LGBTQ Writing from Ancient Times to Yesterday (Flexibound)</p>
+                <p>By Frank Wynne</p>
+                <p class="product-price"><b>₱1,399.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781250250469.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Cemetery Boys (Hardcover)</p>
+                <p>By Aiden Thomas</p>
+                <p class="product-price"><b>₱863.20</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593243978.1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Queerly Beloved: A Novel (Paperback)</p>
+                <p>By Susie Dumond</p>
+                <p class="product-price"><b>₱719.20</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780593094594-1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">The Queer Eye Guide: How to Love Yourself the Fab Five Way (Paperback)</p>
+                <p>By Penguin Workshop</p>
+                <p class="product-price"><b>₱360.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9780316310413_1_.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Dead End Girls (Hardcover)</p>
+                <p>By Wendy Heard</p>
+                <p class="product-price"><b>₱467.50</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="Fully Booked.html#manga-section" style="text-decoration: none; color: inherit;">
+        <h2 id="manga-section" style="margin-top: 50px; text-align: left; margin-left: 10px;">MANGA</h2>
+    </a>
+    <div class="product-grid">
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/i/m/imageedit_11_6737208721.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 1">
+                <p class="product-title">The Lesbiana's Guide to Catholic School (Hardcover)</p>
+                <p>By Sonora Reyes</p>
+                <p class="product-price"><b>₱730.80</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781685796204.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Asumi-chan is Interested in Lesbian Brothels! Vol. 3 (Paperback)</p>
+                <p>By Kuro Itsuki</p>
+                <p class="product-price"><b>₱839.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781974738960-1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Sakamoto Days, Vol. 9 (Paperback)</p>
+                <p>By Yuto Suzuki</p>
+                <p class="product-price"><b>₱495.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781646091621.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">I Think Our Son Is Gay, Vol. 4 (Paperback)</p>
+                <p>By Okura</p>
+                <p class="product-price"><b>₱824.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/i/m/imageedit_14_3020585293.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds">
+                <p class="product-title">My Special One, Vol. 3 (Paperback)</p>
+                <p>By Momoko Koda</p>
+                <p class="product-price"><b>₱559.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781974737604-1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Yona of the Dawn, Vol. 39 (Paperback)</p>
+                <p>By Mizuho Kusanagi</p>
+                <p class="product-price"><b>₱559.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781974738823-1.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">How Do We Relationship?, Vol. 9 (Paperback)</p>
+                <p>By Tamifull</p>
+                <p class="product-price"><b>₱559.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781685796686.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Ayakashi Triangle, Vol. 4 (Paperback)</p>
+                <p>By Kentaro Yabuki</p>
+                <p class="product-price"><b>₱783.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781974741052_7a5b6_1_.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product 2">
+                <p class="product-title">Kaguya-sama: Love Is War, Vol. 27 (Paperback)</p>
+                <p>By Aka Akasaka</p>
+                <p class="product-price"><b>₱559.00</b></p>
+                <button class="add-to-cart" onclick="addToCart('Ripped Skinny Jeans', 24.99)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+ 
+
+
+
+
+    <script>
+        function addToCart(productPage) {
+            // Redirect to the specific product page when the "Add to Cart" button is clicked
+            window.location.href = productPage;
+        }
+        </script>
+
+    
+<footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h2><img src="https://www.fullybookedonline.com/media/wysiwyg/Footerlogo.png" style="width: 200px;"></h2>
+        <p>For inquiries/concerns, <br>get in touch with us at <a href="mailto:support@fullybookedonline.com">support@fullybookedonline.com</a></p>
+        <p>Live Chat</p>
+      </div>
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="About Us.htm">About Us</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="contact us.htm">Contact Us</a></li>
+          <li><a href="#">Direct Sales</a></li>
+          <li><a href="#">Discount Card</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Payment Methods</h2>
+        <p>Bank Deposit/Over the Counter</p>
+        <p>Cash on Delivery</p>
+        <p>Credit/Debit Cards</p>
+        <p>Digital Wallets (GCash, Paymaya)</p>
+        <p>Online Banking</p>
+      </div>
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/fullybooked" target="_blank" class="w3-hover-opacity w3-large">
+            <i class="fa fa-facebook-official"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://www.instagram.com/_fullybooked" target="_blank" class="w3-hover-opacity w3-large">
+            <i class="fa fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+        <a href="https://twitter.com/_FullyBooked" target="_blank" class="w3-hover-opacity w3-large">
+            <i class="fa fa-twitter"></i> <!-- Twitter Icon -->
+        </a>
+      </div>
+</div>
+  </footer>
+
+</body>
+</html>
+
+

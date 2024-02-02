@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLY BOOKED</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            align-items: center;
+            justify-content: center;
+            animation: colorTransition 5s infinite alternate; /* Adjust the duration as needed */
+        }
+
+        @keyframes colorTransition {
+            from {
+                background-color: yellow;
+            }
+            to {
+                background-color: orange;
+            }
+        }
+
+        .btn-3 {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .small-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .single-product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .col-2 {
+            flex-basis: 45%;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        h4 {
+            color: #e44d26;
+            margin: 10px 0;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        select, input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #e44d26;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #e44d26;
+            margin-top: 20px;
+        }
+
+        .text {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .author {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .review-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            margin-left: 230px;
+            width: 700px;
+        }
+
+        .review-container h1 {
+            font-size: 1.8em;
+            color: #e44d26;
+            margin-bottom: 20px;
+        }
+
+        #stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            font-size: 1.5em;
+            color: #ccc;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #e44d26;
+        }
+
+        #review {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        #submit {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e44d26;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reviews {
+            margin-top: 20px;
+            text-align: left;
+            margin-right: 20px;
+        }
+
+        .review-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            margin-right: 10px;
+        }
+
+        .review-item p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<a href="product sample.htm" class="btn-3"><i class="fa fa-arrow-left"></i> Back</a>
+
+<div class="small-container single-product" id="hunger-product">
+    <div class="row">
+        <div class="col-2">
+            <center>
+                <img src="https://www.fullybookedonline.com/media/catalog/product/9/7/9781496735355.jpg?width=350&height=350&canvas=350,350&optimize=high&bg-color=255,255,255&fit=bounds" alt="Product Image">
+            </center>
+        </div>
+    
+
+        <div class="col-2">
+            <p>Books / Romance</p>
+            <h1>Instamom: A Modern Romance with Humor and Heart (Paperback)</h1>
+            <p class="author"><b>By Chantel Guertink</b></p>
+            <h4>₱798.00</h4>
+            
+
+            <input type="number" value="1">
+            <a href="Add to cart.htm" class="btn">Add to Cart</a>
+            <h3>Synopsis <i class="fa fa-indent" style="color: #F3D7CA; margin-left: 10px;"></i></h3>
+            <br>
+            <p class="text">In this #funny, #wise, #emotionally compelling look at modern love and finding your true path, a proudly kid-free influencer meets the ultimate #dealbreaker . . .
+
+                It’s the influencer’s golden rule: know your niche. Kit Kidding has found hers on Instagram, where she gets paid to promote brands and share expertly curated posts about her fun, fabulous, child-free life. Kit likes kids just fine, but she passionately believes that women who choose not to become mothers shouldn’t have to face guilt. Or judgement. Or really hot chefs who turn out to be single dads.
+                
+                Will MacGregor is aggravating, sexy, persistent, averse to social media, and definitely a bad idea. As soon as Kit learns his parenting status, she vows to put their scorching one-night stand behind her and move on. But Will and Kit are thrown together on an Instagram campaign, and the more time she spends with him—and his whip-smart, eight-year-old daughter, Addie—the more difficult it is to stay away, much less sustain what Will so cleverly calls her “Resting Beach Face.” Kit’s picture-perfect career path is suddenly clashing with the possibility of a different future—messy, complicated, and real. Which life does she truly want? Will she have to re-invent herself? And will love still be waiting by the time she figures it out?
+                </p>
+        </div>
+        <hr>
+        <div class="container">
+            <!-- Existing content -->
+        
+            <!-- Improved review section -->
+            <div class="review-container">
+                <h1>Customer Reviews</h1>
+                <div id="stars" class="stars">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <p>Share your review:</p>
+                <textarea id="review" placeholder="Write your review here"></textarea>
+                <button id="submit">Submit</button>
+                
+            </div>
+        </div>
+        
+
+</body>
+</html>
+    
+
+      
+
+

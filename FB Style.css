@@ -1,0 +1,734 @@
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+}
+
+header {
+    background-color: white;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+
+#navbar {
+    overflow: hidden;
+    background-color: #e44d26;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar img {
+    vertical-align: middle;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.search-container {
+    float: right;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+}
+
+.search-container button {
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sticky navigation bar on scroll */
+/* Note: Adjust the background color and other styles as needed */
+/* The transition effect is added for a smoother appearance */
+@media (min-width: 600px) {
+    #navbar {
+        padding: 15px;
+        transition: 0.4s;
+    }
+
+    #navbar a {
+        padding: 16px 16px;
+        font-size: 18px;
+    }
+
+    .search-container input[type=text] {
+        width: 200px;
+    }
+}
+
+
+
+  
+
+  .Photo {
+    text-align: center; /* Center the child elements horizontally */
+    margin-top: 50px;
+}
+
+.Photo img {
+    max-width: 90%; /* Make sure the image doesn't exceed the container width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any extra spacing around the image */
+    margin: auto; /* Center the image horizontally within its container */
+    margin-bottom: 150px;
+    border-radius: 10px;
+    border: 5px solid #e44d26; /* Add a 2px black border */
+}
+
+
+
+
+
+.container_p {
+    position: relative;
+    width: 500%;
+    max-width: 500px;
+    text-align: center; /* Center the containers */
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 70px;
+}
+
+.image {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    display: block; /* Make sure each image is a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+
+ 
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e44d26;
+    overflow: hidden;
+    width: 70%;
+    height: 100%;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0; /* Initially hide the overlay */
+}
+  
+  
+  .container_p:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .container_p:hover .overlay {
+    width: 100%;
+  }
+
+
+ 
+  
+
+
+
+.row img {
+    margin-right: 15px; /* Add some spacing between images */
+    vertical-align: middle;
+    height: 300px;
+    width: 350px;
+}
+
+.shoe-container img {
+    margin-right: 15px; /* Add some spacing between images */
+    vertical-align: middle;
+    height: 300px;
+    width: 350px;
+}
+
+.shoe-container p {
+    margin: 10px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items stay in one row */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    padding: 0 4px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {
+    opacity: 0.7;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content,
+  #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+  
+  .about-container {
+    position: relative;
+    background-color: #e44d26; /* Background color for the shape */
+    padding: 20px;
+    margin: 20px; /* Adjust margin as needed */
+    border-radius: 10px; /* Border radius for rounded corners */
+  }
+
+
+
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-section a i {
+        font-size: 36px; /* Adjust the size as needed */
+    }
+  
+  .footer-section h2 {
+    color: #F3B95F;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+  .product-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Make containers stretch vertically */
+  }
+  
+  .product-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  .product-container img {
+    width: 100%; /* Ensure the image takes 100% of the container width */
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    padding: 10px;
+  }
+
+.restock-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.restock-button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    margin-top: 50px;
+    margin-left: 240px;
+    margin-bottom: 50px;
+  }
+  .container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+  .container .form {
+    margin-top: 30px;
+  }
+  .form .input-box {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .input-box label {
+    color: #333;
+  }
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 95%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  .form .gender-box {
+    margin-top: 20px;
+  }
+  .gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  .form .gender {
+    column-gap: 5px;
+  }
+  .gender input {
+    accent-color: rgb(130, 106, 251);
+  }
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  .gender label {
+    color: #707070;
+  }
+  .address :where(input, .select-box) {
+    margin-top: 15px;
+  }
+  .select-box select {
+    height: 100%;
+    width: 95%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+  .form button {
+    height: 55px;
+    width: 95%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+  }
+  .form button:hover {
+    background: rgb(88, 56, 250);
+  }
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .form .column {
+      flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
+  }
+
+
+
+
+
+
+  .comment-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 15px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 850px;
+    margin-left: 190px;
+}
+
+.comment-container:hover {
+    transform: scale(1.02);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-meta {
+    flex-grow: 1;
+}
+
+.comment-divider {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.comment-body {
+    margin-bottom: 15px;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-button {
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.like-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.comment-submit {
+    padding: 8px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.comment-submit:hover {
+    background-color: #0056b3;
+}
+
+ iframe {
+            width: 900px;
+            height: 450px;
+            border: 2px solid #ddd; /* Add borders */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow for a subtle effect */
+            animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: 70px;
+            margin-bottom: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f8f8f8;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #e44d26;
+            color: #fff;
+        }
+        
+        td {
+            max-width: 30%;
+            word-wrap: break-word;
+        }
+
+        
+
+
+        #image-container {
+            position: relative;
+            width: 600px; /* Adjust according to your image width */
+            border: 2px solid #333; /* Border style */
+            overflow: hidden; /* Hide overflowing content */
+            animation: fadeInCenter 1s ease-out; /* Add animation */
+            margin-bottom: 39px;
+            margin-top: 30px;
+        }
+
+        #map-container {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        #map-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @keyframes fadeInCenter {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        

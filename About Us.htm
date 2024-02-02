@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLY BOOKED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="FB Style.css">
+</head>
+
+<Body>
+    
+    <div id="navbar">
+        <a class="active" href="Fully Booked.html">Home</a>
+        <a href="product sample.htm">Books</a>
+        <a href="reviews.htm">Reviews</a>
+        <a href="About Us.htm">About Us</a>
+        <a href="contact us.htm">Join Us</a>
+        <div class="search-container">
+          <input type="text" placeholder="Search...">
+          <button type="submit">Search</button>
+          <a href="Add to cart.htm" id="cart-icon">&#128722;</a> <!-- Shopping cart icon -->
+      </div>
+      </div>
+
+    <div class="about-container">
+        <h2 style="color: white;">ABOUT US:</h2>
+        <p style="color: white;">
+          Established in 2003, Fully Booked opened its first branch in Rockwell and has grown to 30 branches nationwide since then. 
+          Known for its comprehensive selection of books under every interest, the Philippine bookstore's signature ambiance has
+          also become a haven for thought tinkerers and readers alike.
+        </p>
+      </div>
+
+    <img id="myImg1" src="https://www.rappler.com/tachyon/2023/05/fully-booked.jpeg" alt="FULLY BOOKED" style="width:100%;max-width:355px; margin-top: 10px; margin-left: 25px;">
+
+    <!-- The Modal -->
+    <div id="myModal1" class="modal">
+    
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+    
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01_1">
+    
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption_1"></div>
+    </div>
+    
+    <img id="myImg2" src="https://thepodium.com.ph/wp-content/uploads/2022/08/361623741_676501594515911_8219282127143176818_n.jpg" alt="FULLY BOOKED" style="width:100%;max-width:400px; margin-top: 30px;">
+    
+    <!-- The Modal -->
+    <div id="myModal2" class="modal">
+    
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+    
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01_2">
+    
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption_2"></div>
+    </div>
+
+    <img id="myImg3" src="https://pbs.twimg.com/media/Fh0dpDAUAAIFua0.jpg" alt="FULLY BOOKED" style="width:100%;max-width:400px; margin-top: 30px;">
+
+    <!-- The Modal -->
+    <div id="myModal3" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01_3">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption_3"></div>
+    </div>
+    
+    <script>
+      // JavaScript for the first image and modal
+      var modal1 = document.getElementById("myModal1");
+      var img1 = document.getElementById("myImg1");
+      var modalImg1 = document.getElementById("img01_1");
+      var captionText1 = document.getElementById("caption_1");
+    
+      img1.onclick = function() {
+        modal1.style.display = "block";
+        modalImg1.src = this.src;
+        captionText1.innerHTML = this.alt;
+      }
+    
+      var span1 = document.getElementsByClassName("close")[0];
+    
+      span1.onclick = function() {
+        modal1.style.display = "none";
+      }
+    
+      // JavaScript for the second image and modal
+      var modal2 = document.getElementById("myModal2");
+      var img2 = document.getElementById("myImg2");
+      var modalImg2 = document.getElementById("img01_2");
+      var captionText2 = document.getElementById("caption_2");
+    
+      img2.onclick = function() {
+        modal2.style.display = "block";
+        modalImg2.src = this.src;
+        captionText2.innerHTML = this.alt;
+      }
+    
+      var span2 = document.getElementsByClassName("close")[1];
+    
+      span2.onclick = function() {
+        modal2.style.display = "none";
+      }
+
+      var modal3 = document.getElementById("myModal3");
+      var img3 = document.getElementById("myImg3");
+      var modalImg3 = document.getElementById("img01_3");
+      var captionText3 = document.getElementById("caption_3");
+
+      img3.onclick = function() {
+         modal3.style.display = "block";
+         modalImg3.src = this.src;
+         captionText3.innerHTML = this.alt;
+      }
+
+      var span3 = document.getElementsByClassName("close")[2];
+
+      span3.onclick = function() {
+          modal3.style.display = "none";
+      }
+    </script>
+
+<div class="about-container">
+    <h2 style="color: white;">Local store with world-class titles</h2>
+    <p style="color: white;">
+        With over a hundred thousand titles across multiple genres, Fully Booked has captured the loyalty of book lovers of all ages. 
+        From Graphic Novels to books on Cookery, Architecture and Design, anyone who walks in a 
+        Fully Booked bookstore with an open mind and a thirst for a good read will ultimately find a story to fall in love with.
+    </p>
+  </div>
+
+  <center>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123579.7207140787!2d120.90865534335936!3d14.549638899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8f2429f73e7%3A0x217c3b71c3acc2c3!2sFully%20Booked%20Bonifacio%20High%20Street!5e0!3m2!1sen!2sph!4v1706294910694!5m2!1sen!2sph" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</center>
+
+<center>
+    <div id="image-container">
+        <div id="map-container">
+            <img src="Photo/Image Map.png" alt="Clickable Map">
+        </div>
+    </div>
+</center>
+
+
+<table>
+    <tr>
+        <th>Store</th>
+        <th>Address</th>
+        <th>Store Hours</th>
+        <th>Contact</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>Fully Booked - Bonifacio Global City</td>
+        <td>Bldg. 6902 Bonifacio High Street, Bonifacio Global City, 1634 Taguig City</td>
+        <td>Mon-Thu: 11am-11pm<br> Fri: 11am-12mn<br> Sat: 10am-12mn<br> Sun: 10am-11pm</td>
+        <td>(632) 858-7000 | 858-7036 | 858-7037 | 858-7038</td>
+        <td>fb_fort@fullybookedonline.com</td>
+    </tr>
+    <tr>
+        <td>Fully Booked - Alabang Town Center</td>
+        <td>Fully Booked Building, Commerce Avenue, Alabang Town Center, Muntinlupa City</td>
+        <td>Mon-Thu: 11am-10:30pm<br> Fri: 11am-11:30pm<br> Sat: 10am-11:30pm<br> Sun: 10am-10:30pm</td>
+        <td>(632) 5529410</td>
+        <td>fb_atc@fullybookedonline.com</td>
+    </tr>
+    <tr>
+        <td>Fully Booked - Rockwell</td>
+        <td>Level R3, Shop 330, The Powerplant Mall, 25 Lopez Dr., Rockwell Center, 1211 Makati City, Metro Manila</td>
+        <td>Mon-Thu: 11am-10pm<br> Fri: 11am-11pm<br> Sat: 10am-11pm<br> Sun: 10am-10pm</td>
+        <td>(632) 8980968</td>
+        <td>fb_rockwell@fullybookedonline.com</td>
+    </tr>
+    <tr>
+        <td>Fully Booked - Greenhills Promenade</td>
+        <td>Unit R5, Promenade, Greenhills Shopping Center, 1502 San Juan, Metro Manila</td>
+        <td>No specified hours</td>
+        <td>No specified contact</td>
+        <td>No specified email</td>
+    </tr>
+</table>
+
+
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h2><img src="https://www.fullybookedonline.com/media/wysiwyg/Footerlogo.png" style="width: 200px;"></h2>
+        <p>For inquiries/concerns, <br>get in touch with us at <a href="mailto:support@fullybookedonline.com">support@fullybookedonline.com</a></p>
+        <p>Live Chat</p>
+      </div>
+      <div class="footer-section">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="About Us.htm">About Us</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="contact us.htm">Contact Us</a></li>
+          <li><a href="#">Direct Sales</a></li>
+          <li><a href="#">Discount Card</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Payment Methods</h2>
+        <p>Bank Deposit/Over the Counter</p>
+        <p>Cash on Delivery</p>
+        <p>Credit/Debit Cards</p>
+        <p>Digital Wallets (GCash, Paymaya)</p>
+        <p>Online Banking</p>
+      </div>
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/fullybooked" target="_blank" class="w3-hover-opacity w3-large">
+            <i class="fa fa-facebook-official"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://www.instagram.com/_fullybooked" target="_blank" class="w3-hover-opacity w3-large">
+            <i class="fa fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+        <a href="https://twitter.com/_FullyBooked" target="_blank" class="w3-hover-opacity w3-large">
+            <i class="fa fa-twitter"></i> <!-- Twitter Icon -->
+        </a>
+      </div>
+</div>
+  </footer>
+
+</Body>

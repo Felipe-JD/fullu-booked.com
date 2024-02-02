@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FULLY BOOKED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+     body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+}
+
+.row {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-75,
+.col-25 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.col-75 {
+    flex-basis: calc(75% - 20px); /* Adjusted the width and added margin */
+    margin-right: 20px; /* Added margin */
+}
+
+.col-25 {
+    flex-basis: calc(25% - 20px); /* Adjusted the width and added margin */
+    margin-left: 20px; /* Added margin */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Ensures proper spacing */
+}
+
+.col-50 label,
+.col-25 h4 {
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input,
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon-container i {
+    font-size: 30px;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.col-25 .container {
+    text-align: center;
+}
+
+.col-25 hr {
+    border: 0.5px solid #ddd;
+    margin: 15px 0;
+}
+
+.col-25 p,
+.col-25 h4 {
+    color: #555;
+    margin: 0; /* Adjusted spacing */
+}
+
+.col-25 a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.col-25 a:hover {
+    text-decoration: underline;
+}
+
+.btn-3 {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            border-radius: 5px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="product sample.htm" class="btn-3"><i class="fa fa-arrow-left"></i> Back</a>
+
+    <div class="row">
+        <div class="col-75">
+          <h2>Checkout</h2>
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-50">
+                <h3>Billing Address</h3>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input type="text" id="city" name="city" placeholder="Manila" required>
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state">Barangy</label>
+                    <input type="text" id="state" name="state" placeholder="Brgy.." required>
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Zip</label>
+                    <input type="text" id="zip" name="zip" placeholder="10001" required>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-50">
+                <h3>Payment</h3>
+                <label for="cname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy;"></i>
+                  <i class="fa fa-cc-amex" style="color:blue;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                  <i class="fa fa-cc-discover" style="color:orange;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                <label for="ccnum">Credit card number</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2018" required>
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+            </label>
+            <input type="submit" value="Continue to checkout" class="btn">
+          </form>
+        </div>
+      
+        <div class="col-25">
+            <div class="container">
+              <h4>Cart
+                <span class="price" style="color:black">
+                  <i class="fa fa-shopping-cart"></i>
+                  <b id="cart-item-count">6</b>
+                </span>
+              </h4>
+              <ul id="cart-items-list">
+                <li><p class="product-title">Fragments of Horror (Hardcover)</p></li>
+                <p>By Junji Ito</p>
+                <p class="product-price"><b>₱999.00</b></p>
+                <li><p class="product-title">Dissolving Classroom, Collector's Edition (Hardcover)</p></li>
+                <p>By Junji Ito</p>
+                <p class="product-price"><b>₱1,397.00</b></p>
+                <li><p class="product-title">Final Fantasy XIV: Eorzea Academy (Paperback)</p></li>
+                <p>By Esora Amaichi, FINAL FANTASY XIV Operations Team</p>
+                <p class="product-price"><b>₱839.00</b></p>
+                <li><p class="product-title">Stray: A Memoir (Hardcover)</p></li>
+                <p>By Stephanie Danler</p>
+                <p class="product-price"><b>₱1,246.00</b></p>
+                <li><p class="product-title">The Lesbiana's Guide to Catholic School (Hardcover)</p></li>
+                <p>By Sonora Reyes</p>
+                <p class="product-price"><b>₱730.80</b></p>
+                <li><p class="product-title">Brutal Prince: Brutal Birthright, Book 1 – (Paperback)</p></li>
+                <p>By Sophie Lark</p>
+                <p class="product-price"><b>₱1,493.00</b></p>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            // Initialize cart as an empty array
+            let cart = [];
+          
+            // Function to add item to cart
+            function addToCart(title, price) {
+              const item = { title, price };
+              cart.push(item);
+          
+              // Update cart count
+              updateCartCount();
+          
+              // Update cart items list
+              updateCartItemsList();
+            }
+          
+            // Function to update cart count
+            function updateCartCount() {
+              const cartItemCount = document.getElementById('cart-item-count');
+              cartItemCount.textContent = cart.length;
+            }
+          
+            // Function to update cart items list
+            function updateCartItemsList() {
+              const cartItemsList = document.getElementById('cart-items-list');
+              const cartItemPlaceholder = document.getElementById('cart-item-placeholder');
+          
+              // Remove the placeholder
+              cartItemsList.removeChild(cartItemPlaceholder);
+          
+              // Clear the existing list
+              cartItemsList.innerHTML = '';
+          
+              // Add cart items to the list
+              cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.title} - ₱${item.price.toFixed(2)}`;
+                cartItemsList.appendChild(listItem);
+              });
+            }
+          </script>
+</body>
+</html>
